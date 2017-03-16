@@ -36,6 +36,9 @@ run mv /opt/gitblit/data/* /opt/gitblit-data
 
 run echo "server.httpPort=80" >> /opt/gitblit-data/gitblit.properties
 run echo "server.httpsPort=443" >> /opt/gitblit-data/gitblit.properties
+run echo "server.redirectToHttpsPort=false" >> /opt/gitblit-data/gitblit.properties
+run echo "web.enableRpcManagement=true" >> /opt/gitblit-data/gitblit.properties
+run echo "web.enableRpcAdministration=true" >> /opt/gitblit-data/gitblit.properties
 
 # Setup the Docker container environment and run Gitblit
 workdir /opt/gitblit
